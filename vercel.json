@@ -1,0 +1,14 @@
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/upload.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "src": "/upload", "dest": "api/upload.py" },
+    { "src": "/stream/(.*)", "dest": "api/upload.py" }
+  ]
+}
